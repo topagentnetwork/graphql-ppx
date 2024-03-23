@@ -112,7 +112,7 @@ let rec parser_for_type = (schema, loc, type_ref) => {
 };
 
 let filter_out_null_values = [%expr
-  Js.Array.filter(((_, value)) => !Js.Json.test(value, Js.Json.Null))
+  Js.Array.filter(((_, value)) => !Js.Json.test(value, Js.Json.Kind.Null))
 ];
 
 let json_of_fields = (schema, loc, expr, fields) => {
