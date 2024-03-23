@@ -12,8 +12,7 @@ jobs:
         os: [ubuntu-latest]
 
     container:
-      # https://github.com/baransu/docker-esy
-      image: cichocinski/docker-esy:alpine3.8
+      image: alexfedoseev/alpine-node-yarn-esy:0.0.4
 
     steps:
       - uses: actions/checkout@v2
