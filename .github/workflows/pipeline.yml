@@ -65,7 +65,7 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x]
-        os: [macOS-13, macOS-14]
+        os: [macOS-13]
 
     steps:
       - uses: actions/checkout@v2
