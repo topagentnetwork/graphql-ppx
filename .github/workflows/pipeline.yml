@@ -48,6 +48,12 @@ jobs:
         run: |
           esy install
 
+      - name: build
+        run: |
+          esy release-static
+        env:
+          CI: true
+
       - name: Upload artifacts ${{ matrix.os }}
         uses: actions/upload-artifact@master
         with:
@@ -102,6 +108,12 @@ jobs:
       - name: install
         run: |
           esy install
+
+      - name: build
+        run: |
+          esy b
+        env:
+          CI: true
 
       - name: Upload artifacts ${{ matrix.os }}
         uses: actions/upload-artifact@master
