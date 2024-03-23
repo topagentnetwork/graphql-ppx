@@ -13,6 +13,10 @@ if (platform === "win32") {
   platform = "win";
 }
 
+if (platform === "darwin" && arch === "arm64") {
+  arch = "x64";
+}
+
 copyBinary("bin/graphql_ppx-" + platform + "-" + arch + ".exe", "ppx");
 // for backward compatibility - remove with 1.0 release
 copyBinary("bin/graphql_ppx-" + platform + "-" + arch + ".exe", "ppx6");
